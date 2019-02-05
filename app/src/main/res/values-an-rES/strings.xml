@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maxim Drozd Homework 2</string>
+    <string name="DenseDesc">Portrait: 5 icônes par ligne \nPaysage: 7 icônes par ligne</string>
+    <string name="DefaultDesc">Portrait: 4 icônes par ligne \nPaysage: 6 icônes par ligne</string>
+    <string name="Dense">Mise en page dense</string>
+    <string name="Default">Mise en page par défaut</string>
+    <string name="Light">Thème lumière</string>
+    <string name="Dark">Thème sombre</string>
+    <string name="Welcome">Bienvenue</string>
+    <string name="Description">Meilleure application gratuite sur le marché</string>
+    <string name="Next">Suivant</string>
+</resources>

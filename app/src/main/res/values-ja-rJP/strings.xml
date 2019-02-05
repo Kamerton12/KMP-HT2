@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maxim Drozd Homework 2</string>
+    <string name="Next">次へ</string>
+    <string name="Description">市場で最高の無料アプリ</string>
+    <string name="Welcome">ようこそ</string>
+    <string name="Dark">ダークテーマ</string>
+    <string name="Light">軽いテーマ</string>
+    <string name="Default">デフォルトレイアウト</string>
+    <string name="Dense">密なレイアウト</string>
+    <string name="DefaultDesc">肖像画：1行あたり4個のアイコン\n風景：1行あたり6個のアイコン</string>
+    <string name="DenseDesc">縦：1行あたり5個のアイコン\n横：1行あたり7個のアイコン</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maxim Drozd Homework 2</string>
+    <string name="Next">Далее</string>
+    <string name="Description">Лучшее доступное приложение</string>
+    <string name="Welcome">Здравствуйте</string>
+    <string name="Dark">Темная тема</string>
+    <string name="Light">Светлая тема</string>
+    <string name="Default">Стандартный макет</string>
+    <string name="Dense">Плотный макет</string>
+    <string name="DefaultDesc">Портретная: 4 иконки в ряд\nЛандшафтная: 6 иконок в ряд</string>
+    <string name="DenseDesc">Портретная: 5 иконки в ряд\nЛандшафтная: 7 иконок в ряд</string>
+</resources>

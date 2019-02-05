@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Maxim Drozd Homework 2</string>
+    <string name="Name" translatable="false">Maxim Drozd</string>
+    <string name="Text" translatable="false">Github link to Kamerton12</string>
+    <string name="Next">Next</string>
+    <string name="Description">Best free app on market</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Dark">Dark theme</string>
+    <string name="Light">Light theme</string>
+    <string name="Default">Default layout</string>
+    <string name="Dense">Dense layout</string>
+    <string name="DefaultDesc">Portrait: 4 icons per row Landscape: 6 icons per row</string>
+    <string name="DenseDesc">Portrait: 5 icons per row Landscape: 7 icons per row</string>
+</resources>
