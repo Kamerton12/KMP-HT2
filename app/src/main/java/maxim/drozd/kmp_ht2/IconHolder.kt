@@ -15,13 +15,26 @@ class IconHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     private val view: View = itemView.findViewById(R.id.view)
     private val text: TextView = itemView.findViewById(R.id.text)
 
-    fun bind(color: Int) {
+    fun bind(color: Int, position: Int, items: ArrayList<Int>, adapter: RecyclerView.Adapter<IconHolder>) {
+        if(items[position] == -1){
+            itemView.visibility = View.INVISIBLE
+            return
+        }
+        itemView.visibility = View.VISIBLE
         itemView.setOnLongClickListener(object: View.OnLongClickListener{
             override fun onLongClick(v: View?): Boolean {
-                if(v != null){
-                    TODO("Сделать удаление")
-                    startActivity(v.context, Intent(v.context, ListActivity::class.java), null)
-                    Snackbar.make(v, "pp", Snackbar.LENGTH_LONG).show()
+                if(v != null) {
+                    //startActivity(v.context, Intent(v.context, ListActivity::class.java), null)
+                    Snackbar.make(v, "pp", Snackbar.LENGTH_LONG).setAction(R.string.Delete){
+                        if("notmoe".equals("notmove")){
+                            v.visibility = View.INVISIBLE
+                            items[position] = -1
+                        }else{
+                            items.removeAt(position)
+                            adapter.notifyDataSetChanged()
+                        }
+                    }.show()
+                    //TODO("Сделать разные виды удаления")
                 }
                 return true
             }

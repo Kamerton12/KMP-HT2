@@ -59,7 +59,7 @@ class LauncherActivity : AppCompatActivity() {
         rec.adapter = Adapter()
         val manager = GridLayoutManager(this, span)
         rec.layoutManager = manager
-        val off = resources.getDimensionPixelOffset(R.dimen.offset)
+        val off = resources.getDimensionPixelOffset(R.dimen.half_offset)
         rec.addItemDecoration(CustomDecorator(off))
 
         fab.setOnClickListener{view ->

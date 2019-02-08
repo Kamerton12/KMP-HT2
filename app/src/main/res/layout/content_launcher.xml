@@ -11,7 +11,7 @@
         android:id="@+id/rec"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="@dimen/offset"
+        android:padding="@dimen/half_offset"
         android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

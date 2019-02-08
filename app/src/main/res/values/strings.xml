@@ -11,4 +11,5 @@
     <string name="Dense">Dense layout</string>
     <string name="DefaultDesc">Portrait: 4 icons per row Landscape: 6 icons per row</string>
     <string name="DenseDesc">Portrait: 5 icons per row Landscape: 7 icons per row</string>
+    <string name="Delete">Delete</string>
 </resources>
