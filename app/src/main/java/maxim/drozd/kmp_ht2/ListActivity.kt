@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_list.*
 import kotlinx.android.synthetic.main.content_list.*
 
@@ -21,9 +22,10 @@ class ListActivity : AppCompatActivity() {
             addItemDecoration(dec)
         }
 
-        fab.setOnClickListener{view ->
-            TODO("Реализовать нормальное добавление опять")
-            Snackbar.make(view, "Hello", Snackbar.LENGTH_LONG).show()
+        fab.setOnClickListener{
+            (recView.adapter as ListAdapter).items.add(0, null)
+            Log.i(MainActivity.TAG, "List element added")
+            (recView.adapter as ListAdapter).notifyDataSetChanged()
         }
     }
 }

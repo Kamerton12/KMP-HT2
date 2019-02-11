@@ -11,4 +11,5 @@
     <string name="DefaultDesc">Портретная: 4 иконки в ряд\nЛандшафтная: 6 иконок в ряд</string>
     <string name="DenseDesc">Портретная: 5 иконки в ряд\nЛандшафтная: 7 иконок в ряд</string>
     <string name="Delete">Удалить</string>
+    <string name="Yes">Да</string>
 </resources>

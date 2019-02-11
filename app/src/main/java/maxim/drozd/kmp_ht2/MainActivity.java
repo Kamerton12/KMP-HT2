@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TAG = "TAGGGGG";
     public static final String SHARED_PREFERENCES_NAME = "maxim.drozd.kmp_ht2.SHP";
     public static final String THEME_PREFERENCES = "maxim.drozd.kmp_ht2.SHP.theme";
     public static final String FIRST_LAUNCH = "maxim.drozd.kmp_ht2.SHP.firstLaunch";
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         boolean firstLaunch = sp.getBoolean(FIRST_LAUNCH, true);
 
         if(firstSessionLaunch) {
-            Intent intent = new Intent(this, LauncherActivity.class);
+//            Intent intent = new Intent(this, LauncherActivity.class);
+            Intent intent = new Intent(this, ListActivity.class);
             startActivity(intent);
         }
 

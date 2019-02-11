@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ListAdapter: RecyclerView.Adapter<ListViewHolder>() {
 
@@ -209,16 +210,25 @@ class ListAdapter: RecyclerView.Adapter<ListViewHolder>() {
     "sugsloot hybrids IRQ forlorner organzined ",
     "lemonado sportsome extinguishable ourari ")
 
+    val items = ArrayList<Field?>()
+
+    init {
+        for(i in 0..999)
+            items.add(null)
+    }
+
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ListViewHolder {
         return ListViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.list_item_layout, p0, false))
     }
 
+    override fun getItemCount() = items.size
 
-
-    override fun getItemCount() = 1000
-
-    override fun onBindViewHolder(p0: ListViewHolder, p1: Int) {
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val r = Random()
-        p0.bind(Color.rgb(r.nextInt(256), r.nextInt(256), r.nextInt(256)),  messages[(r.nextInt(messages.size))])
+        if(items[position] == null)
+            items[position] = Field((r.nextInt(messages.size)), Color.rgb(r.nextInt(256), r.nextInt(256), r.nextInt(256)))
+        holder.bind(messages[items[position]!!.messageIndex], position, this, items)
     }
+
+    class Field(val messageIndex: Int, val color: Int)
 }

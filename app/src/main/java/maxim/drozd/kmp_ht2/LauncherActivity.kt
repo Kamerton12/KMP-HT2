@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.graphics.Color
 import android.support.v4.content.res.TypedArrayUtils
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -20,9 +21,7 @@ import android.widget.QuickContactBadge
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_launcher.*
 import kotlinx.android.synthetic.main.content_launcher.*
-
-import java.util.ArrayList
-import java.util.Arrays
+import java.util.*
 
 import java.util.Arrays.asList
 
@@ -58,13 +57,26 @@ class LauncherActivity : AppCompatActivity() {
 
         rec.adapter = Adapter()
         val manager = GridLayoutManager(this, span)
-        rec.layoutManager = manager
+        rec.layoutManager = manager as RecyclerView.LayoutManager?
         val off = resources.getDimensionPixelOffset(R.dimen.half_offset)
         rec.addItemDecoration(CustomDecorator(off))
 
-        fab.setOnClickListener{view ->
-            TODO("Реализовать нормальное добавление + хранить компоненты")
-            Snackbar.make(view, "Hello", Snackbar.LENGTH_LONG).show()
+        fab.setOnClickListener{
+            val ad = (rec.adapter as Adapter)
+            if("notmove".equals("notmove")) {
+                for(i in 0 until ad.itemCount){
+                    if(ad.items[i] == -1) {
+                        ad.items[i] = null
+                        ad.notifyDataSetChanged()
+                        Log.i(MainActivity.TAG, "Grid element added")
+                        break
+                    }
+                }
+            } else {
+                ad.items.add(0, null)
+                Log.i(MainActivity.TAG, "Grid element added")
+                ad.notifyDataSetChanged()
+            }
         }
     }
 }

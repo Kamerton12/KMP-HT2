@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".LauncherActivity">
 
-    <!--TODO Вынести отступ в отделную переменную-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec"
         android:layout_width="0dp"
